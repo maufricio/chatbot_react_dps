@@ -1,0 +1,111 @@
+{
+    "respuestas": [
+        {
+            "id": 1,
+            "name": "calendario académico",
+            "respuesta": "El calendario académico para este semestre está disponible en el portal del estudiante."
+        },
+        {
+            "id": 2,
+            "name": "horario de clases",
+            "respuesta": "Puedes encontrar tu horario de clases en el portal del estudiante, bajo la sección de 'Horario'."
+        },
+        {
+            "id": 3,
+            "name": "períodos de inscripción",
+            "respuesta": "Los períodos de inscripción para cursos están publicados en el calendario académico y en el portal del estudiante."
+        },
+        
+        {
+            "id": 4,
+            "name": "biblioteca",
+            "respuesta": "La biblioteca está ubicada en el edificio principal y sus horarios son de 8 AM a 8 PM de lunes a viernes."
+        },
+        {
+            "id": 5,
+            "name": "servicios estudiantiles",
+            "respuesta": "Puedes contactar al departamento de servicios estudiantiles a través del correo servicios@universidad.edu o visitando su oficina en el edificio de administración."
+        },
+        {
+            "id": 6,
+            "name": "eventos importantes",
+            "respuesta": "Esta semana tenemos una feria de empleo el jueves en el auditorio principal. ¡No te lo pierdas!"
+        },
+        {
+            "id": 7,
+            "name": "estrés",
+            "respuesta": "Si estás experimentando estrés o problemas emocionales, puedes obtener ayuda en el centro de bienestar estudiantil, ubicado en el edificio B. También puedes llamar al 123-456-7890 para asistencia inmediata."
+        },
+        {
+            "id": 8,
+            "name": "problemas emocionales",
+            "respuesta": "Si estás experimentando estrés o problemas emocionales, puedes obtener ayuda en el centro de bienestar estudiantil, ubicado en el edificio B. También puedes llamar al 123-456-7890 para asistencia inmediata."
+        },
+        {
+            "id": 9,
+            "name": "recursos para estudiantes con discapacidades",
+            "respuesta": "Los recursos disponibles para estudiantes con discapacidades incluyen acceso a material en formato accesible, tutores especializados y apoyo del departamento de servicios estudiantiles."
+        },
+        {
+            "id": 10,
+            "name": "asesoramiento",
+            "respuesta": "Los servicios de asesoramiento y tutoría están disponibles a través del centro de apoyo académico. Puedes hacer una cita en el portal del estudiante o visitando el centro en el edificio C."
+        },
+        {
+            "id": 11,
+            "name": "tutoría",
+            "respuesta": "Los servicios de asesoramiento y tutoría están disponibles a través del centro de apoyo académico. Puedes hacer una cita en el portal del estudiante o visitando el centro en el edificio C."
+        },
+        {
+            "id": 12,
+            "name": "pasantías",
+            "respuesta": "Puedes encontrar pasantías o prácticas profesionales relevantes para tu carrera en la bolsa de trabajo del portal del estudiante o contactando al departamento de desarrollo profesional."
+        },
+        {
+            "id": 13,
+            "name": "prácticas profesionales",
+            "respuesta": "Puedes encontrar pasantías o prácticas profesionales relevantes para tu carrera en la bolsa de trabajo del portal del estudiante o contactando al departamento de desarrollo profesional."
+        },
+        {
+            "id": 14,
+            "name": "currículum vitae",
+            "respuesta": "La universidad ofrece talleres y recursos en línea para ayudarte a escribir tu currículum vitae. Puedes inscribirte a través del portal del estudiante."
+        },
+        {
+            "id": 15,
+            "name": "talleres para entrevistas",
+            "respuesta": "Hay talleres disponibles para prepararte para entrevistas de trabajo. Consulta el calendario de eventos en el portal del estudiante para ver las fechas y horarios."
+        },
+        {
+            "id": 16,
+            "name": "clubes",
+            "respuesta": "La universidad ofrece una variedad de clubes y actividades extracurriculares. Puedes ver una lista completa en el portal del estudiante bajo la sección de 'Vida Estudiantil'."
+        },
+        {
+            "id": 17,
+            "name": "actividades extracurriculares",
+            "respuesta": "La universidad ofrece una variedad de clubes y actividades extracurriculares. Puedes ver una lista completa en el portal del estudiante bajo la sección de 'Vida Estudiantil'."
+        },
+        {
+            "id": 18,
+            "name": "actividad interesante para el fin de semana",
+            "respuesta": "Este fin de semana hay una excursión al parque natural organizada por el club de senderismo. También hay una noche de cine en el campus el sábado."
+        },
+        {
+            "id": 19,
+            "name": "alimentación",
+            "respuesta": "Las opciones de alimentación en el campus incluyen la cafetería principal, varios quioscos de comida rápida y el comedor vegetariano en el edificio D."
+        },
+        {
+            "id": 20,
+            "name": "gracias",
+            "respuesta": "Si necesitas más ayuda en el futuro o si tienes alguna otra pregunta o proyecto en el que estés trabajando, no dudes en pedírmelo. ¡Buena suerte y que tengas un excelente día!"
+        },
+        {
+            "id": 21,
+            "name": "hola",
+            "respuesta": "Dime en qué puedo ayudarte este día."
+        }
+        
+    ]
+}
