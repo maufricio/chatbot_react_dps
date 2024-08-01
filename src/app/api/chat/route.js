@@ -1,13 +1,14 @@
 import { NextResponse } from 'next/server'; // Importa NextResponse desde el módulo next/server para manejar las respuestas del servidor
 //Importando archivo json
-import {respuestas} from './respuestas.json';
+import {respuestas} from  './respuestas';
 // Define una función asincrónica que maneja las solicitudes POST
 export async function POST(request) {
     // Extrae el mensaje del cuerpo de la solicitud y espera a que se convierta en un objeto JSON
     const { message } = await request.json();
 
     // Inicializa una variable de respuesta con un mensaje predeterminado
-    let reply = 'Lo siento, no entendi bien tu pregunta pero puedes volcver a preguntar asegurate de dar mas detalles esta vez.';
+let reply = 'Lo siento, no entendi bien tu pregunta pero puedes volver a preguntar asegurate de dar mas detalles esta vez.';
+    
 
     // Información académica y administrativa
    /* if (message.toLowerCase().includes('calendario académico')) {
@@ -60,6 +61,24 @@ export async function POST(request) {
         reply = 'No entiendo tu pregunta. Por favor, intenta preguntar de otra manera o visita el portal del estudiante para más información.';
     }*/
 
+
+
+//variable que almacenara las respuestas que luego se mostraran en la pantalla
+let respuestas_encontrada = [];
+
+//recorrer el json para encontrar las respuestas que coincidan con la pregunta
+respuestas.map((respuesta)=>{
+    if (message.toLowerCase().includes(respuesta.name)) {
+        respuestas_encontrada.push(respuesta.respuesta);
+    }
+});
+
+//No se encuentra la pregunta  por lo tanto se dara la respuesta que esta predeterminada en la variable reply
+if (respuestas_encontrada.length === 0) {
+    respuestas_encontrada.push(reply);
+}
+
+
     // Devuelve la respuesta como un objeto JSON
-    return NextResponse.json({ reply });
+    return NextResponse.json({ reply: respuestas_encontrada });
 }
