@@ -52,7 +52,7 @@ export async function POST(request) {
         reply = 'Si necesitas más ayuda en el futuro o si tienes alguna otra pregunta o proyecto en el que estés trabajando, no dudes en pedírmelo. ¡Buena suerte y que tengas un excelente día!.';
    
     } else if (message.toLowerCase().includes('hola')) {
-        reply = 'Dime en que puedo ayuadarte este dia ?';
+        reply = 'Dime en que puedo ayudarte este dia ?';
 
     // Respuesta por defecto
     } else {
