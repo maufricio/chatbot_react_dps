@@ -1,15 +1,16 @@
 import { NextResponse } from 'next/server'; // Importa NextResponse desde el módulo next/server para manejar las respuestas del servidor
-
+//Importando archivo json
+import {respuestas} from './respuestas.json';
 // Define una función asincrónica que maneja las solicitudes POST
 export async function POST(request) {
     // Extrae el mensaje del cuerpo de la solicitud y espera a que se convierta en un objeto JSON
     const { message } = await request.json();
 
     // Inicializa una variable de respuesta con un mensaje predeterminado
-    let reply = 'No entiendo tu pregunta.';
+    let reply = 'Lo siento, no entendi bien tu pregunta pero puedes volcver a preguntar asegurate de dar mas detalles esta vez.';
 
     // Información académica y administrativa
-    if (message.toLowerCase().includes('calendario académico')) {
+   /* if (message.toLowerCase().includes('calendario académico')) {
         reply = 'El calendario académico para este semestre está disponible en el portal del estudiante.';
     } else if (message.toLowerCase().includes('horario de clases')) {
         reply = 'Puedes encontrar tu horario de clases en el portal del estudiante, bajo la sección de "Horario".';
@@ -57,7 +58,7 @@ export async function POST(request) {
     // Respuesta por defecto
     } else {
         reply = 'No entiendo tu pregunta. Por favor, intenta preguntar de otra manera o visita el portal del estudiante para más información.';
-    }
+    }*/
 
     // Devuelve la respuesta como un objeto JSON
     return NextResponse.json({ reply });
