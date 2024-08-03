@@ -1,13 +1,14 @@
 import { NextResponse } from 'next/server'; // Importa NextResponse desde el módulo next/server para manejar las respuestas del servidor
 //Importando archivo json
-import {respuestas} from  './respuestas';
+import { respuestas } from  './respuestas';
 // Define una función asincrónica que maneja las solicitudes POST
+
 export async function POST(request) {
     // Extrae el mensaje del cuerpo de la solicitud y espera a que se convierta en un objeto JSON
     const { message } = await request.json();
 
     // Inicializa una variable de respuesta con un mensaje predeterminado
-let reply = 'Lo siento, no entendi bien tu pregunta pero puedes volver a preguntar asegurate de dar mas detalles esta vez.';
+let reply = 'Lo siento, no entendi bien tu pregunta pero puedes volver a preguntar. Por favor, asegúrate de dar mas detalles esta vez.';
     
 
     // Información académica y administrativa
@@ -77,7 +78,6 @@ respuestas.map((respuesta)=>{
 if (respuestas_encontrada.length === 0) {
     respuestas_encontrada.push(reply);
 }
-
 
     // Devuelve la respuesta como un objeto JSON
     return NextResponse.json({ reply: respuestas_encontrada });
