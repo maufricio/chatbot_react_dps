@@ -24,7 +24,7 @@ export default function Home() {
             </Head>
             <main className={styles.main}>     
                          
-                <h1 className={styles.title}>Bienvenido al Chatbot de Soporte</h1>          
+                <h1 className={styles.title}>¡Bienvenido al Chatbot de Soporte!</h1>          
                 <Chatbot />
                 
                 
