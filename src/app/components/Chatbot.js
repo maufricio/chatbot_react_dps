@@ -46,14 +46,19 @@ const Chatbot = () => {
     return (
         <div className={styles.chatbot}>
             <div className={styles.chatWindow}>
-                {messages.map((msg, index) => (               
+                {messages.map((msg, index) => (       
+                    <>       
                     <div key={index} className={`${styles.message} ${styles[msg.sender]}`}>
-                        {msg.text}
-                        {typeof msg.text === 'string' && msg.text.toLowerCase().includes('biblioteca') && (
-                            <Mapa></Mapa>
-                        )}
+                        {msg.text} 
                     </div>
-
+                    <div>          
+                        {
+                            typeof msg.text === 'string' && msg.text.toLowerCase().includes('biblioteca') && (
+                                <Mapa></Mapa>
+                            )
+                        }
+                    </div>
+                </> 
                 ))}
             </div>
             <div className={styles.inputContainer}>
