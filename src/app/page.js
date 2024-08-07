@@ -1,3 +1,4 @@
+"use client"
 //Importa el componente Head desde 'next/head', que se utiliza para modificar el <head> de la página
 import Head from 'next/head';
 
@@ -6,6 +7,7 @@ import Chatbot from '../app/components/Chatbot';
 
 //Importa los estilos desde el archivo CSS especificado en la ruta '../app/styles/Home.module.css'
 import styles from '../app/styles/Home.module.css';
+import Mapa from '../app/components/Mapa';
 
 // Define un componente funcional llamado Home
 // Devuelve un contenedor <div> con una clase de estilo aplicada desde el archivo CSS importado
@@ -20,10 +22,15 @@ export default function Home() {
                 <title>Chatbot de Soporte</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className={styles.main}>               
+            <main className={styles.main}>     
+                         
                 <h1 className={styles.title}>Bienvenido al Chatbot de Soporte</h1>          
                 <Chatbot />
+                
+                
             </main>
+     
         </div>
+        
     );
 }

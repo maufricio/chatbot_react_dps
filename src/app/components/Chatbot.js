@@ -4,6 +4,7 @@
 import React, { useState } from 'react'; // React para crear componentes, useState para manejar estados
 import axios from 'axios'; // Axios para hacer solicitudes HTTP
 import styles from '../styles/Chatbot.module.css'; // Importa los estilos específicos para el chatbot
+import Mapa from "../components/Mapa"
 
 // Define el componente Chatbot
 const Chatbot = () => {
@@ -48,7 +49,11 @@ const Chatbot = () => {
                 {messages.map((msg, index) => (               
                     <div key={index} className={`${styles.message} ${styles[msg.sender]}`}>
                         {msg.text}
+                        {typeof msg.text === 'string' && msg.text.toLowerCase().includes('biblioteca') && (
+                            <Mapa></Mapa>
+                        )}
                     </div>
+
                 ))}
             </div>
             <div className={styles.inputContainer}>

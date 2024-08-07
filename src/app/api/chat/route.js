@@ -63,7 +63,6 @@ let reply = 'Lo siento, no entendi bien tu pregunta pero puedes volver a pregunt
     }*/
 
 
-
 //variable que almacenara las respuestas que luego se mostraran en la pantalla
 let respuestas_encontrada = [];
 

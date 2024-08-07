@@ -1,45 +1,37 @@
-import react from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'; //importar los componentes para el mapa
-//import 'leaflet/dist/leaflet.css'; si se quieren agregar estilos
-import L from 'leaflet'; //se importa la librería de leaflet
+"use client";
+import React, { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
+import "leaflet/dist/leaflet.css";
 
-//se borra la función que obtiene la ruta de las imágenes de los marcadores
-delete L.Icon.Default.prototype._getIconUrl;
-//Se cambia la ruta de las imágenes de los marcadores
-L.Icon.Default.mergeOptions({
-    iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
-    iconUrl: require('leaflet/dist/images/marker-icon.png'),
-    shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
-});
+const Map = () => {
+    const [isMounted, setIsMounted] = useState(false);
 
-const Mapa = () => {
-    //Coordenada de la biblioteca del campus de soya (mapa fijo)
-    const position = [13.716857941670275, -89.1536223598861];
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
+    const MapContainer = dynamic(
+        () => import('react-leaflet').then((mod) => mod.MapContainer),
+        { ssr: false }
+    );
+
+    const TileLayer = dynamic(
+        () => import('react-leaflet').then((mod) => mod.TileLayer),
+        { ssr: false }
+    );
+
+    if (!isMounted) {
+        return null;
+    }
 
     return (
-        <MapContainer
-            center={position}
-            zoom={16}
-            style={{height: '400px', width: '100%'}} //tamaño del mapa
-            //se deshabilita la interacción con el mapa
-            dragging={false}
-            touchZoom={false}
-            zoomControl={false}
-            scrollWheelZoom={false}
-            doubleClickZoom={false}
-            boxZoom={false}
-            tap={false}
-        >
+        <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} style={{ height: '50vh', width: '100%' }}>
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             />
-            <Marker position={position}>
-                <Popup>
-                    Biblioteca
-                </Popup>
-            </Marker>
         </MapContainer>
     );
 };
 
-export default Mapa;
+export default Map;
