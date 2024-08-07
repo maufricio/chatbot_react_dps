@@ -105,6 +105,16 @@
             "id": 21,
             "name": "hola",
             "respuesta": "Dime en qué puedo ayudarte este día."
+        },
+        {
+            "id": 22,
+            "name": "adiós",
+            "respuesta": "Fue un gusto atenderte!."
+        },
+        {
+            "id": 23,
+            "name": "nos vemos",
+            "respuesta": "Fue un gusto atenderte!."
         }
         
     ]

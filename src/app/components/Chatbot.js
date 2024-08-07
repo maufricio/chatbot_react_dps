@@ -38,6 +38,11 @@ const Chatbot = () => {
         }
     };
 
+    //funcion para vaciar chat
+    const handleClearChat = () => {
+        setMessages([]);
+    }
+
     // Renderiza el componente Chatbot
    // Renderiza cada mensaje en la ventana de chat, con una clase de estilo específica según el remitente
    // Actualiza el estado del input con el valor del campo de texto
@@ -51,7 +56,7 @@ const Chatbot = () => {
                     <div key={index} className={`${styles.message} ${styles[msg.sender]}`}>
                         {msg.text} 
                     </div>
-                    <div>          
+                    <div style={{marginBottom: 10}}>          
                         {
                             typeof msg.text === 'string' && msg.text.toLowerCase().includes('biblioteca') && (
                                 <Mapa></Mapa>
@@ -69,7 +74,8 @@ const Chatbot = () => {
                     onKeyPress={(e) => e.key === 'Enter' && handleSend()} 
                     className={styles.input}
                 />
-                <button onClick={handleSend} className={styles.button}>Send</button> 
+                <button onClick={handleSend} className={styles.button}>Send</button>
+                <button onClick={handleClearChat} className={styles.clearButton}>Vaciar Chat</button> 
             </div>
         </div>
     );
